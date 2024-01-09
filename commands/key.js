@@ -1,12 +1,44 @@
+import { KeyManager } from "../lib/key-manager.js";
+import inquirer from "inquirer";
+import colors from "colors";
+import { API_AUTHORITY } from "../constants/index.js";
+import { isRequired } from "../utils/index.js";
+
+
 export const key = {
-    set() {
-        console.log('Hello from set command');
+    async set() {
+        const keyManager = new KeyManager();
+        const input = await inquirer.prompt([
+            {
+                type: 'input',
+                name: 'apiKey',
+                message: 'Enter API key'.green + ' from ' + API_AUTHORITY,
+                validate: isRequired
+            }
+        ]);
+        const key = keyManager.setKey(input.apiKey);
+        if (key) {
+            console.log('API key set'.blue);
+        }
     },
     show() {
-        console.log('Hello from show command');
+        try {
+            const keyManager = new KeyManager();
+            const key = keyManager.getKey();
+            console.log('Current API key is:'.yellow, key);
+        } catch (error) {
+            console.error(error.message.red);
+        }
     },
     remove() {
-        console.log('Hello from remove command');
+        try {
+            const keyManager = new KeyManager();
+            keyManager.deleteKey();
+            console.log('Key Removed'.yellow);
+            return;
+        } catch (error) {
+            console.error(error.message.red);
+        }
     }
 
 }

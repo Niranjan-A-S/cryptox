@@ -1,0 +1,1 @@
+export const API_AUTHORITY = 'https://login.microsoftonline.com';
