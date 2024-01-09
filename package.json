@@ -1,0 +1,19 @@
+{
+  "name": "cryptox",
+  "version": "1.0.0",
+  "description": "This is a command line interface for viewing crypto prices.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "cryptox": "bin/cryptox.js"
+  },
+  "author": "Niranjan A S",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^11.1.0",
+    "configstore": "^6.0.0"
+  }
+}
