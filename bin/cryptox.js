@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
 import pkg from '../package.json' assert  {type: 'json'};
-import { API_AUTHORITY } from "../constants/index.js";
+import { BASE_URL } from "../constants/index.js";
 
 const { name, description, version, } = pkg;
 
@@ -9,7 +9,8 @@ const program = new Command();
 
 program
     .option('-v, --version', version)
-    .command('key', 'Manage API Key -- Get at ' + API_AUTHORITY)
+    .command('key', 'Manage API Key -- Get at ' + BASE_URL)
+    .command('check', 'Check Coin Price Info')    
     .parse(process.argv)
 
 

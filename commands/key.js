@@ -1,7 +1,7 @@
 import { KeyManager } from "../lib/key-manager.js";
 import inquirer from "inquirer";
 import colors from "colors";
-import { API_AUTHORITY } from "../constants/index.js";
+import { BASE_URL } from "../constants/index.js";
 import { isRequired } from "../utils/index.js";
 
 
@@ -12,7 +12,7 @@ export const key = {
             {
                 type: 'input',
                 name: 'apiKey',
-                message: 'Enter API key'.green + ' from ' + API_AUTHORITY,
+                message: 'Enter API key'.green + ' from ' + BASE_URL,
                 validate: isRequired
             }
         ]);
