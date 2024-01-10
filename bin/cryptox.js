@@ -3,7 +3,7 @@ import { Command } from 'commander';
 import pkg from '../package.json' assert  {type: 'json'};
 import { BASE_URL } from "../constants/index.js";
 
-const { name, description, version, } = pkg;
+const { version } = pkg;
 
 const program = new Command();
 
