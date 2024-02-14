@@ -1,5 +1,5 @@
 {
-  "name": "cryptox",
+  "name": "@niranjann/cryptox",
   "version": "1.0.0",
   "description": "This is a command line interface for viewing crypto prices.",
   "main": "index.js",
@@ -25,5 +25,16 @@
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
     "eslint-plugin-promise": "^6.0.0"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Niranjan-A-S/cryptox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Niranjan-A-S/cryptox/issues"
+  },
+  "homepage": "https://github.com/Niranjan-A-S/cryptox#readme"
 }
